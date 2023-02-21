@@ -1,0 +1,423 @@
+@import url(./main.css);
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --Montserrat-bold: "Montserrat-bold";
+  --Montserrat-medium: "Montserrat-medium";
+  --Montserrat-regular: "Montserrat-regular";
+  --Prosto-One-regular: "Prosto One-regular";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: var(--white);
+  font-family: var(--Montserrat-bold);
+}
+
+.body_page {
+  background-color: #151515;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header_page {
+  width: 100%;
+  padding: 6px 0;
+  background-color: #282828;
+}
+
+.header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header_img {
+  margin-right: 30px;
+}
+
+.header_menu,
+.footer_menu {
+  display: flex;
+  gap: 30px;
+}
+
+.burger_menu {
+  width: 35px;
+  height: 32px;
+  background-color: rgb(190, 190, 190);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  display: none;
+}
+
+.burger_menu > div {
+  width: 30px;
+  height: 2px;
+  background-color: #282828;
+}
+
+.header_icon {
+  display: flex;
+  gap: 25px;
+}
+
+.header_banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner_img {
+  max-width: 1600px;
+  width: 100%;
+  z-index: -1;
+  position: relative;
+}
+
+.banner_title {
+  font-family: var(--Prosto-One-regular);
+  font-size: 100px;
+  line-height: 75px;
+  margin-bottom: 38px;
+  position: absolute;
+  top: 304px;
+}
+
+.banner_button {
+  padding: 13px 14px;
+  font-family: var(--Montserrat-medium);
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 20px;
+  border: none;
+  line-height: 24px;
+  border-radius: 10px;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 424px;
+}
+
+.main_item {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main_item-text {
+  font-family: var(--Montserrat-medium);
+  width: 438px;
+  margin-top: 43px;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.second_main-item {
+  margin-top: 117px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.airpods {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.airpods_item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 280px;
+  width: 61px;
+  height: 1px;
+  background-color: #c4c4c4;
+}
+.airpods_item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 300px;
+  width: 61px;
+  height: 1px;
+  background-color: #c4c4c4;
+}
+
+.airpods_text {
+  text-align: right;
+  width: 250px;
+}
+
+.second_airpods-text {
+  width: 270px;
+}
+
+.cards {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 6px;
+  padding: 15px 47px;
+  gap: 10px;
+}
+
+.card_title {
+  color: var(--black);
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.card_number {
+  color: var(--black);
+  font-family: var(--Montserrat-regular);
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.card_button {
+  color: var(--white);
+  background-color: var(--black);
+  padding: 7px 57px;
+  border: #000 solid 2px;
+}
+.card_button:hover {
+  background-color: #fff;
+  border: #000 solid 2px;
+  color: #000;
+}
+
+.footer_wrapper {
+  margin-top: 55px;
+  width: 100%;
+  background-color: #282828;
+  padding: 81px 0;
+}
+
+.footer_page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer_item {
+  display: flex;
+  gap: 29px;
+}
+
+@media (max-width: 1350px) {
+  .container {
+    padding: 0 150px;
+  }
+  .second_main-item {
+    gap: 20px;
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .airpods_item::before {
+    display: none;
+  }
+  .airpods_item::after {
+    display: none;
+  }
+
+  .airpods {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .second_airpods-text {
+    width: 570px;
+    text-align: center;
+  }
+
+  .airpods_text {
+    width: 550px;
+    text-align: center;
+  }
+
+  .main_item {
+    margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main_item-text {
+    margin-top: 0px;
+    width: 100%;
+    text-align: center;
+  }
+  .second_main-item {
+    flex-direction: column-reverse;
+  }
+
+  .airpods_img {
+    width: 238px;
+    height: 335px;
+  }
+
+  .main_item-img {
+    width: 422px;
+    height: 225;
+  }
+
+  .second_main-img {
+    width: 327px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+  .banner_title {
+    top: 224px;
+  }
+  .banner_button {
+    top: 334px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main_item {
+    margin-top: 100px;
+  }
+
+  .main_item-img {
+    width: 402px;
+    height: 205;
+  }
+
+  .airpods_img {
+    width: 168px;
+    height: 235px;
+  }
+
+  .second_main-img {
+    width: 307px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+    .footer_wrapper{
+        padding: 50px;
+    }
+  .airpods_text {
+    text-align: right;
+    width: 250px;
+  }
+
+  .main_item-img {
+    width: 302px;
+    height: 165;
+  }
+
+  .second_airpods-text {
+    width: 270px;
+  }
+  .footer_page {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .container {
+    padding: 0 100px;
+  }
+  .header_menu {
+    display: none;
+  }
+  .header_icon {
+    display: none;
+  }
+  .burger_menu {
+    display: flex;
+  }
+
+  .header_wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .banner_title {
+    top: 200px;
+    font-size: 60px;
+    line-height: 35px;
+  }
+  .banner_button {
+    top: 270px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding: 0 50px;
+  }
+
+  .footer_wrapper{
+    padding: 20px;
+  }
+  .banner_title {
+    font-size: 45px;
+    line-height: 20px;
+    top: 150px;
+  }
+  .banner_button {
+    top: 210px;
+  }
+  .main_item-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .main_item-img {
+    width: 242px;
+    height: 135;
+  }
+  .second_main-img {
+    width: 257px;
+    height: 270px;
+  }
+  .airpods_text {
+    text-align: center;
+  }
+  .banner_button {
+    padding: 7px;
+  }
+}
